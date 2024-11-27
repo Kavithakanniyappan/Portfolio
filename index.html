@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>K. Kavitha - Portfolio</title>
+
+
+
+  <!-- CSS Styles -->
+
+  <style>
+
+    /* Basic Styles */
+
+    body {
+
+      font-family: 'Arial', sans-serif;
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      background-color: #f0f8ff;
+
+      color: #333;
+
+      scroll-behavior: smooth;
+
+    }
+
+
+
+    nav {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      background-color: #87cefa;
+
+      padding: 15px;
+
+      position: sticky;
+
+      top: 0;
+
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+      z-index: 1000;
+
+      animation: fadeInDown 1s ease;
+
+    }
+
+
+
+    nav .logo {
+
+      font-size: 30px;
+
+      font-weight: bold;
+
+      color: #2c3e50;
+
+      animation: zoomIn 1s ease;
+
+    }
+
+
+
+    .nav-links {
+
+      list-style: none;
+
+      display: flex;
+
+      gap: 15px;
+
+    }
+
+
+
+    .nav-links a {
+
+      color: #2c3e50;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+    }
+
+
+
+    #hero {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      height: 100vh;
+
+      background: linear-gradient(to right, #f8f9fa, #e6e6e6);
+
+      text-align: center;
+
+      color: #2c3e50;
+
+      animation: fadeIn 2s ease;
+
+    }
+
+
+
+    #hero h1 {
+
+      font-size: 48px;
+
+      margin-bottom: 20px;
+
+      opacity: 0; /* Start hidden */
+
+      animation: fadeInUp 2s ease forwards; /* Added forwards to maintain final state */
+
+      animation-delay: 0.5s; /* Delay for name appearance */
+
+    }
+
+
+
+    #hero h2 {
+
+      font-size: 24px;
+
+      margin-bottom: 20px;
+
+      opacity: 0; /* Start hidden */
+
+      animation: fadeInUp 2s ease forwards; /* Added forwards to maintain final state */
+
+      animation-delay: 1s; /* Delay for role appearance */
+
+    }
+
+
+
+    #hero .cta {
+
+      background-color: #00bfff;
+
+      color: white;
+
+      padding: 15px 30px;
+
+      text-decoration: none;
+
+      border-radius: 5px;
+
+      font-size: 18px;
+
+      animation: bounceIn 2s ease forwards; /* Added forwards to maintain final state */
+
+      animation-delay: 1.5s; /* Delay for button appearance */
+
+    }
+
+
+
+    section {
+
+      padding: 50px;
+
+      text-align: center;
+
+    }
+
+
+
+    #about p {
+
+      font-size: 18px;
+
+      line-height: 1.6;
+
+      animation: fadeInLeft 1.5s ease;
+
+    }
+
+
+
+    #skills .skills-container {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 20px;
+
+    }
+
+
+
+    .skill {
+
+      background-color: #87cefa;
+
+      color: white;
+
+      padding: 10px;
+
+      border-radius: 5px;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+      animation: bounceIn 1s ease;
+
+    }
+
+
+
+    .certificates-container {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+      margin-top: 20px;
+
+    }
+
+
+
+    .certificate-card {
+
+      background-color: #f0f8ff;
+
+      padding: 20px;
+
+      border-radius: 10px;
+
+      width: 200px;
+
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+      animation: fadeInUp 1.5s ease;
+
+    }
+
+
+
+    .projects-container {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+
+    .project-card {
+
+      background-color: #f0f8ff;
+
+      padding: 20px;
+
+      border-radius: 10px;
+
+      width: 300px;
+
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+      animation: fadeInUp 1.5s ease;
+
+    }
+
+
+
+    .project-link {
+
+      color: #00bfff;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+    }
+
+
+
+    #contact-form {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 15px;
+
+      max-width: 400px;
+
+      margin: 0 auto;
+
+      animation: fadeInRight 1.5s ease;
+
+    }
+
+
+
+    #contact-form input, #contact-form textarea {
+
+      padding: 10px;
+
+      border-radius: 5px;
+
+      border: 1px solid #ccc;
+
+    }
+
+
+
+    #contact-form button {
+
+      background-color: #00bfff;
+
+      color: white;
+
+      padding: 10px;
+
+      border: none;
+
+      cursor: pointer;
+
+      transition: background-color 0.3s ease;
+
+    }
+
+
+
+    #contact-form button:hover {
+
+      background-color: #0056b3;
+
+    }
+
+
+
+    /* Animations */
+
+    @keyframes fadeIn {
+
+      from { opacity: 0; }
+
+      to { opacity: 1; }
+
+    }
+
+
+
+    @keyframes fadeInUp {
+
+      from { transform: translateY(20px); opacity: 0; }
+
+      to { transform: translateY(0); opacity: 1; }
+
+    }
+
+
+
+    @keyframes fadeInLeft {
+
+      from { transform: translateX(-20px); opacity: 0; }
+
+      to { transform: translateX(0); opacity: 1; }
+
+    }
+
+
+
+    @keyframes fadeInRight {
+
+      from { transform: translateX(20px); opacity: 0; }
+
+      to { transform: translateX(0); opacity: 1; }
+
+    }
+
+
+
+    @keyframes fadeInDown {
+
+      from { transform: translateY(-20px); opacity: 0; }
+
+      to { transform: translateY(0); opacity: 1; }
+
+    }
+
+
+
+    @keyframes zoomIn {
+
+      from { transform: scale(0); opacity: 0; }
+
+      to { transform: scale(1); opacity: 1; }
+
+    }
+
+
+
+    @keyframes bounceIn {
+
+      from { transform: scale(0.8); opacity: 0; }
+
+      to { transform: scale(1); opacity: 1; }
+
+    }
+
+
+
+    /* Responsive Design */
+
+    @media (max-width: 768px) {
+
+      .projects-container {
+
+        flex-direction: column;
+
+      }
+
+
+
+      .project-card {
+
+        width: 100%;
+
+      }
+
+
+
+      .certificates-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+      }
+
+
+
+      .certificate-card {
+
+        width: 90%;
+
+      }
+
+    }
+
+.resume-btn {
+
+  display: inline-block;
+
+  background-color: #00bfff;
+
+  color: white;
+
+  padding: 15px 30px;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+
+  font-size: 18px;
+
+  margin-top: 20px;
+
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+.resume-btn:hover {
+
+  background-color: #0056b3;
+
+}
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- Navbar Section -->
+
+  <nav>
+
+    <div class="logo">K. Kavitha</div>
+
+    <ul class="nav-links">
+
+      <li><a href="#about">About</a></li>
+
+      <li><a href="#skills">Skills</a></li>
+
+      <li><a href="#projects">Projects</a></li>
+
+      <li><a href="#certificates">Certificates</a></li>
+
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+
+
+  <!-- Hero Section -->
+
+  <section id="hero">
+
+    <div class="hero-content">
+
+      <h1>Hello, I'm Kavitha</h1>
+
+      <h2>Aspiring Full Stack Developer & AI Enthusiast</h2>
+
+      <a href="#projects" class="cta">Check My Work</a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- About Section -->
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <p>A passionate and dedicated B.Tech IT student seeking to leverage technical skills in Python, SQL, Java, and data science to contribute to innovative projects and develop further in the field of full stack development and artificial intelligence. I am currently a final year B.Tech IT student at Sri Balaji Chockalingam Engineering College.</p>
+
+    <p>Email: <a href="mailto:kavithait5017@gmail.com">kavithait5017@gmail.com</a></p>
+
+  </section>
+
+
+
+  <!-- Skills Section -->
+
+  <section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill">HTML</div>
+
+      <div class="skill">CSS</div>
+
+      <div class="skill">JavaScript</div>
+
+      <div class="skill">Python</div>
+
+      <div class="skill">SQL</div>
+
+      <div class="skill">Data Science</div>
+
+      <div class="skill">Java</div>
+
+      <div class="skill">Excel</div>
+
+       <div class="skill">Tableau</div>
+
+
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Projects Section -->
+
+  <section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+
+        <h3>Sales Management System</h3>
+
+        <p>Full stack development project to manage sales data.</p>
+
+        <a href="#" class="project-link">View Project</a>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Air Quality Analysis</h3>
+
+        <p>Data analysis project focusing on air quality in Tamil Nadu.</p>
+
+        <a href="https://github.com/Kavithakanniyappan/ADS_Phase1" class="project-link">View Project</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+ <!-- Certificates Section -->
+
+<section id="certificates">
+
+  <h2>Certificates</h2>
+
+  <div class="certificates-container">
+
+    <div class="certificate-card">
+
+      <h3>Python Certification</h3>
+
+      <p>Great Learning</p>
+
+      <a href="https://drive.google.com/file/d/1bzqfJOgrJZWIDW9IdgQr47BGeOHBjzkq/view?usp=sharing" target="_blank">View Certificate</a>
+
+    </div>
+
+    <div class="certificate-card">
+
+      <h3>Data Science Fundamentals</h3>
+
+      <p>Great Learning</p>
+
+      <a href="https://drive.google.com/file/d/1adTKcFfflkxzWlrZMCbCczuL4v-jn2pm/view?usp=sharing" target="_blank">View Certificate</a>
+
+    </div>
+
+    <div class="certificate-card">
+
+      <h3>Java Certification</h3>
+
+      <p>Great Learning</p>
+
+      <a href="https://drive.google.com/file/d/1x-MEwUcvnsV4wXoFoA1Gnmr48oDLWHla/view?usp=sharing" target="_blank">View Certificate</a>
+
+    </div>
+
+    <div class="certificate-card">
+
+      <h3>Excel Certification</h3>
+
+      <p>Great Learning</p>
+
+      <a href="https://drive.google.com/file/d/1gPnsUdWsrNyU0iLYVh7FBr5YUT94UCVM/view?usp=drive_link" target="_blank">View Certificate</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+  <!-- Contact Section -->
+
+  <section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form id="contact-form">
+
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="email" placeholder="Your Email" required>
+
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+  </section>
+
+<!-- Resume Section -->
+
+<section id="resume">
+
+  <h2>Download My Resume</h2>
+
+  <a href="https://drive.google.com/file/d/1JzokbtWPNo66fihvt5xpr_oQSMEUKPdy/view?usp=drive_link" class="resume-btn">Download Resume</a>
+
+</section>
+
+
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>&copy; 2024 K. Kavitha. All rights reserved.</p>
+
+  </footer>
+
+</body>
+
+  </html>
